@@ -18,7 +18,7 @@
     package.json
 ```
 
-目前支持热加载，转化es6， react, stylus， css；并支持分离出出现两次以上的js
+支持koa服务器热重载
 
 ```
 命令脚本:
