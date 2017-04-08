@@ -5,13 +5,13 @@
 ```
 目录结构
     -dist 
-        common.js
         --js
         --styles
     -src
         --styles
         --components
         --index.html
+        --main.js
     -node_modules
     postcss.config.js // postcss配置文件
     webpack.config.js // webpack配置文件
@@ -23,7 +23,7 @@
 ```
 命令脚本:
 
-    npm run dev
+    npm start
     // 开启热加载服务器
     // localhost:8080
 
