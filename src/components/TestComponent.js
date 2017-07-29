@@ -1,12 +1,34 @@
 import React, { Component } from 'react'
 
 export default class TestComponent extends Component {
+  constructor() {
+    super()
+
+    this.state = {
+      message: 'hello, world'
+    }
+  }
+
+  onClick(...args) {
+    this.setState((pre, net) => ({
+      message: pre.message + ' +1'
+    }))
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    if (nextState.message.length > 15)
+      return false 
+
+    return true
+  }
+
   render() {
+    let i = 1
+
     return (
       <div id="test-component">
-        <h1 className="cla">hello, world</h1>
-        <h1 className="cla">hello, world</h1>
-        <h1 className="cla">hello, world</h1>
+        {this.state.message}
+        <button className="btn" onClick={ (p, e) => this.onClick(e, i)}>click me</button>
       </div>
     )
   }
