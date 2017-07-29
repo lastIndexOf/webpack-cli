@@ -1,14 +1,9 @@
-import App from './components/App.js'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './App.js'
 
 
-App()
-
-let xhr = new XMLHttpRequest()
-
-xhr.open('GET', '/yora/src/v1/activity/activity.php')
-xhr.onreadystatechange = function () {
-	if (xhr.readyState === 4) {
-		console.log(xhr.response)
-	}
-}
-xhr.send()
+ReactDOM.render(
+  <App />,
+  document.querySelector("#app")
+)
