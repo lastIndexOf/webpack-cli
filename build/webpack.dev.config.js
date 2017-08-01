@@ -22,7 +22,7 @@ module.exports = {
 				use: [
 					{
 						loader: 'babel-loader',
-						query: {
+						options: {
 							presets: [ 'latest', 'react' ]
 						}
 					}
@@ -65,3 +65,6 @@ module.exports = {
     new webpack.NoEmitOnErrorsPlugin()
 	]
 }
+
+
+console.log('test loaders')
