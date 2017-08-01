@@ -65,6 +65,3 @@ module.exports = {
     new webpack.NoEmitOnErrorsPlugin()
 	]
 }
-
-
-console.log('test loaders')
