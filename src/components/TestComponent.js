@@ -13,11 +13,12 @@ export default class TestComponent extends Component {
     this.setState((pre, net) => ({
       message: pre.message + ' +1'
     }))
+    console.log(1)
   }
 
   shouldComponentUpdate(nextProps, nextState) {
     if (nextState.message.length > 15)
-      return false 
+      return false
 
     return true
   }
