@@ -13,6 +13,7 @@
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-latest": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "file-loader": "^0.11.2",
     "html-webpack-plugin": "^2.28.0",
     "koa": "^2.2.0",
     "koa-proxies": "^0.3.0",

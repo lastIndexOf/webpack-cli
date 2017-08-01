@@ -27,7 +27,8 @@ export default class TestComponent extends Component {
     let i = 1
 
     return (
-      <div id="test-component">
+      <div className="test-component">
+        <img src={require('./upone-avatar.jpg')} alt="" width="75" height="100"/>
         {this.state.message}
         <button className="btn" onClick={ (p, e) => this.onClick(e, i)}>click me</button>
       </div>

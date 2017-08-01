@@ -33,7 +33,7 @@ module.exports = {
         loader: 'url-loader',
         options: {
           limit: 10000,
-          name: path.resolve(__dirname, 'dist/img/[name].[hash:7].[ext]')
+          name: 'img/[name].[hash:7].[ext]'
         }
       },
       {
@@ -41,7 +41,7 @@ module.exports = {
         loader: 'url-loader',
         options: {
           limit: 10000,
-          name: path.resolve(__dirname, 'dist/media/[name].[hash:7].[ext]')
+          name: 'media/[name].[hash:7].[ext]'
         }
       },
       {
@@ -49,7 +49,7 @@ module.exports = {
         loader: 'url-loader',
         options: {
           limit: 10000,
-          name: path.resolve(__dirname, 'dist/fonts/[name].[hash:7].[ext]')
+          name: 'fonts/[name].[hash:7].[ext]'
         }
       }
 		]
