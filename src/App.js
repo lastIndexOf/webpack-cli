@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import TestComponent from './components/TestComponent'
+import TodoList from './components/TodoList.js'
 
 export default class App extends Component {
   render() {
     return (
-      <TestComponent prop={'hello, world'}></TestComponent>
+      <TodoList></TodoList>
     )
   }
 }

@@ -23,7 +23,8 @@ module.exports = {
 					{
 						loader: 'babel-loader',
 						query: {
-							presets: [ 'latest', 'react' ]
+							presets: [ 'stage-3', 'react' ],
+							plugins: [ 'transform-decorators-legacy' ]
 						}
 					}
 				]
