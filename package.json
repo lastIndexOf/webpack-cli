@@ -21,6 +21,7 @@
     "webpack": "^2.3.3"
   },
   "dependencies": {
+    "mobx-react": "^4.2.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-router": "^4.1.2",

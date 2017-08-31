@@ -1,34 +1,55 @@
-import React, { Component } from 'react'
+import React, { PureComponent, Component } from 'react'
 
 export default class TestComponent extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
 
     this.state = {
-      message: 'hello, world'
+      message: 'one'
     }
+
+    this.onChange = this.onChange.bind(this)
   }
 
-  onClick(...args) {
-    this.setState((pre, net) => ({
-      message: pre.message + ' +1'
-    }))
+  componentWillUpdate() {
+    console.log('re-render')
+    console.log(this.state)
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
-    if (nextState.message.length > 15)
-      return false 
+  componentDidUpdate() {
+    console.log('did update')
+    console.log(this.state)
+  }
 
+  shouldComponentUpdate(nP, nS) {
+    // console.log(this.state.count)
+    // console.log(nS.count)
+    console.log('should update?')
     return true
   }
 
+  onChange(e) {
+    this.setState({
+      message: e.target.value
+    }, () => {
+      console.log('setState callback')
+      console.log(this.state)
+    })
+  }
+
   render() {
-    let i = 1
+    const { message } = this.state
 
     return (
-      <div id="test-component">
-        {this.state.message}
-        <button className="btn" onClick={ (p, e) => this.onClick(e, i)}>click me</button>
+      <div className="test-component">
+        <select onChange={this.onChange} value={message}>
+          <option value="one">one</option>
+          <option value="two">two</option>
+          <option value="three">three</option>
+        </select>
+        <p className="selected">
+          选中的是{message}
+        </p>
       </div>
     )
   }
